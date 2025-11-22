@@ -1,3 +1,1 @@
-export const placeholder = () => {
-  return true
-}
+export { composeStateStoreName } from '@kotkoroid/platform-sdk/src/composers/deployment.composer'

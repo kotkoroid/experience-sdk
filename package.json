@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@nx/js": "^22.1.1",
+    "@std/text": "npm:@jsr/std__text",
     "@swc-node/register": "^1.9.1",
     "@swc/core": "^1.5.7",
     "@swc/helpers": "^0.5.11",
