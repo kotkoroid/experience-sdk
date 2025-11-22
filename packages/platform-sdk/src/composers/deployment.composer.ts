@@ -1,9 +1,9 @@
-import { toKebabCase } from '@std/text'
+import { toKebabCase } from '@std/text';
 
 export const composeStateStoreName = ({
-	projectName,
+  projectName,
 }: {
-	projectName: string;
+  projectName: string;
 }) => {
-	return toKebabCase(`${projectName}-state-store`);
+  return toKebabCase(`${projectName}-state-store`);
 };

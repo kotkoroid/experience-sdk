@@ -1,62 +1,62 @@
-import { expect, test, describe } from "bun:test";
-import { composeStateStoreName } from "@kotkoroid/platform-sdk/src"
+import { expect, test, describe } from 'bun:test';
+import { composeStateStoreName } from '@kotkoroid/platform-sdk/src';
 
-describe("composeStateStoreName", () => {
-  describe("should return state store name in lowercase when", () => {
-    test("it is called with project name in lowercase", () => {
+describe('composeStateStoreName', () => {
+  describe('should return state store name in lowercase when', () => {
+    test('it is called with project name in lowercase', () => {
       const result = composeStateStoreName({
-        projectName: 'ixtal'
-      })
+        projectName: 'ixtal',
+      });
 
-      expect(result).toBe('ixtal-state-store')
+      expect(result).toBe('ixtal-state-store');
     });
 
-    test("it is called with project name in uppercase", () => {
+    test('it is called with project name in uppercase', () => {
       const result = composeStateStoreName({
-        projectName: 'IXTAL'
-      })
+        projectName: 'IXTAL',
+      });
 
-      expect(result).toBe('ixtal-state-store')
+      expect(result).toBe('ixtal-state-store');
     });
 
-    test("it is called with a multi word project name in uppercase", () => {
+    test('it is called with a multi word project name in uppercase', () => {
       const result = composeStateStoreName({
-        projectName: 'SHADOW ISLES'
-      })
+        projectName: 'SHADOW ISLES',
+      });
 
-      expect(result).toBe('shadow-isles-state-store')
+      expect(result).toBe('shadow-isles-state-store');
     });
 
-    test("it is called with project name in kebab case", () => {
+    test('it is called with project name in kebab case', () => {
       const result = composeStateStoreName({
-        projectName: 'shadow-isles'
-      })
+        projectName: 'shadow-isles',
+      });
 
-      expect(result).toBe('shadow-isles-state-store')
+      expect(result).toBe('shadow-isles-state-store');
     });
 
-    test("it is called with project name in snake case", () => {
+    test('it is called with project name in snake case', () => {
       const result = composeStateStoreName({
-        projectName: 'shadow_isles'
-      })
+        projectName: 'shadow_isles',
+      });
 
-      expect(result).toBe('shadow-isles-state-store')
+      expect(result).toBe('shadow-isles-state-store');
     });
 
-    test("it is called with project name in pascal case", () => {
+    test('it is called with project name in pascal case', () => {
       const result = composeStateStoreName({
-        projectName: 'ShadowIsles'
-      })
+        projectName: 'ShadowIsles',
+      });
 
-      expect(result).toBe('shadow-isles-state-store')
+      expect(result).toBe('shadow-isles-state-store');
     });
 
-    test("it is called with project name in camel case", () => {
+    test('it is called with project name in camel case', () => {
       const result = composeStateStoreName({
-        projectName: 'shadowIsles'
-      })
+        projectName: 'shadowIsles',
+      });
 
-      expect(result).toBe('shadow-isles-state-store')
+      expect(result).toBe('shadow-isles-state-store');
     });
-  })
+  });
 });
