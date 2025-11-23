@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/lefthook/schema.json",
+  "pre-commit": {
+    "commands": {
+      "lint": {
+        "run": "bun lint",
+        "stage_fixed": true
+      },
+      "format": {
+        "run": "bun format",
+        "stage_fixed": true
+      }
+    }
+  },
+  "commit-msg": {
+    "commands": {
+      "lint-commit-message": {
+        "run": "bun commitlint --edit {1}"
+      }
+    }
+  }
+}
