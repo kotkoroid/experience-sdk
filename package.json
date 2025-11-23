@@ -8,9 +8,13 @@
   ],
   "scripts": {
     "deps:graph": "nx graph",
-    "format": "oxfmt -c ./oxfmt.jsonc",
     "typecheck": "nx run-many -t typecheck",
-    "test:platform": "bun test ./packages/platform-sdk"
+    "lint": "oxlint --fix -c ./oxlint.jsonc",
+    "format": "oxfmt -c ./oxfmt.jsonc",
+    "test:platform": "bun test ./packages/platform-sdk",
+    "ci:lint": "oxlint -c ./oxlint.jsonc",
+    "ci:format": "oxfmt --check -c ./oxfmt.jsonc",
+    "ci:test": "bun test"
   },
   "devDependencies": {
     "@nx/js": "^22.1.1",
@@ -21,6 +25,7 @@
     "@types/bun": "^1.3.3",
     "nx": "^22.1.1",
     "oxfmt": "^0.14.0",
+    "oxlint": "^1.29.0",
     "tslib": "^2.3.0",
     "typescript": "^5.9.2"
   },

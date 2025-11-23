@@ -4,6 +4,7 @@
   "description": "Utilities crafted for unified approach to development platform.",
   "author": "git@kotkoroid.com",
   "scripts": {
+    "lint": "oxlint --fix -c ../../oxlint.jsonc",
     "format": "oxfmt -c ../../oxfmt.jsonc"
   }
 }
