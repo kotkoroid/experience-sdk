@@ -1,5 +1,5 @@
-import { expect, test, describe } from 'bun:test';
-import { composeStateStoreName } from '@kotkoroid/platform-sdk/src';
+import { composeStateStoreName } from '@kotkoroid/platform-sdk';
+import { describe, expect, test } from 'bun:test';
 
 describe('composeStateStoreName', () => {
   describe('should return state store name in lowercase when', () => {
