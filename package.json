@@ -12,11 +12,12 @@
     "deps:graph": "nx graph",
     "typecheck": "nx run-many -t typecheck",
     "lint": "oxlint --fix -c ./oxlint.jsonc",
+    "lint:check": "oxlint -c ./oxlint.jsonc",
     "format": "oxfmt -c ./oxfmt.jsonc",
+    "format:check": "oxfmt --check -c ./oxfmt.jsonc",
+    "test:all": "bun test",
     "test:platform": "bun test ./packages/platform-sdk",
-    "ci:lint": "oxlint -c ./oxlint.jsonc",
-    "ci:format": "oxfmt --check -c ./oxfmt.jsonc",
-    "ci:test": "bun test"
+    "build:platform": "nx build @kotkoroid/platform-sdk"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",

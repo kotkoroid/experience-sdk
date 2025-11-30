@@ -22,11 +22,14 @@ jobs:
       - name: Type check
         run: bun typecheck
 
-      - name: Format check
-        run: bun ci:format
-
       - name: Lint check
-        run: bun ci:lint
+        run: bun lint:check
+
+      - name: Format check
+        run: bun format:check
 
       - name: Run tests
-        run: bun ci:test
+        run: bun test:all
+
+      - name: Build Platform SDK
+        run: bun build:platform
