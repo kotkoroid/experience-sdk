@@ -1,6 +1,9 @@
 # Operating System
 .DS_Store
-Thumbs.dll
+Thumbs.db
+
+# Runtime
+.wrangler
 
 # Environment
 .env
@@ -11,17 +14,15 @@ node_modules
 # Nx
 .nx
 
-# Alchemy
-.alchemy
-
-# Vite
-dist
-
-# Runtime
-.wrangler
-
 # SvelteKit
 .svelte-kit
 
 # Vitest
 coverage
+
+# Alchemy
+.alchemy
+
+# Build
+*.tsbuildinfo
+dist
