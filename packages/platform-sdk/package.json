@@ -3,6 +3,16 @@
   "version": "0.0.0",
   "description": "Utilities crafted for unified approach to development platform.",
   "author": "git@kotkoroid.com",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "oxlint --fix -c ../../oxlint.jsonc",
     "format": "oxfmt -c ../../oxfmt.jsonc"
